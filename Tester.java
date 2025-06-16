@@ -2,19 +2,26 @@
 public class Tester {
 
     public static void main(String[] args) {
-        Student s1 = new Student();
-        Student s2 = new Student();
-
-        s1.name="Bob";
-        s1.id="11";
-        s2.name="Carol";
-        s2.id="33";
-        System.out.println(s1.name);
-        System.out.println(s1.id);
-        System.out.println(s2.name);
-        System.out.println(s2.id);
-        s1.display();
-        System.out.println("============");
-        s2.display();
+        CinemexTicket ticket1 = new CinemexTicket("Deadpool and Wolverine", "18:30", "Action-Comedy", "July 24, 2024");
+        System.out.println("Total movie ticket(s): " + CinemexTicket.getTotalTickets());
+        System.out.println("1============================");
+        ticket1.calculateTicketPrice();
+        System.out.println("2============================");
+        System.out.println(ticket1);
+        System.out.println("3============================");
+        System.out.println(ticket1.confirmPayment());
+        System.out.println("4============================");
+        System.out.println(ticket1);
+        System.out.println("5============================");
+        CinemexTicket ticket2 = new CinemexTicket("Twisters", "10:00", "Sci-Fi", "August 10, 2024", "Premium");
+        System.out.println("Total movie ticket(s): " + CinemexTicket.getTotalTickets());
+        System.out.println("6============================");
+        ticket2.calculateTicketPrice();
+        System.out.println("7============================");
+        System.out.println(ticket2.confirmPayment());
+        System.out.println("8============================");
+        System.out.println(ticket2);
+        System.out.println("9============================");
+        System.out.println(ticket2.confirmPayment());
     }
 }
